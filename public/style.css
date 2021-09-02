@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.navItem {
+  text-decoration: underline;
+  color: blue;
+}
+
+.navItem.-active {
+  text-decoration: none;
+  color: brown;
+}
+
+h1 {
+  margin: 0 0 2rem;
+}
+
+p, figure, img {
+  margin: 0 0 1rem;
+}
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+.pageBody {
+  animation: 500ms fadeIn;
+}
+.pageBody.-leaving {
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+}
